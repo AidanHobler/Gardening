@@ -1,5 +1,5 @@
 package gardening;
-
+//Just a comment to see that git is set up properly.
 import java.awt.Canvas;
 import java.awt.Dimension;
 import java.awt.Frame;
