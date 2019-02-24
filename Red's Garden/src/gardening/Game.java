@@ -35,7 +35,7 @@ public class Game implements Runnable {
 	public static final int groundlevel = 490;
 	private MusicPlayer music = new MusicPlayer();
 	private boolean isEating = false;
-	private String currentSong = "Upbeat";
+	private String currentSong = "Reds Song";
 	private GameWindow window;
 	private boolean listHasChanged = false;
 	private Durt durt;

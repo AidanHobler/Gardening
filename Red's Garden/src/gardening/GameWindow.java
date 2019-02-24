@@ -1,5 +1,5 @@
 package gardening;
-//Just a comment to see that git is set up properly.
+
 import java.awt.Canvas;
 import java.awt.Dimension;
 import java.awt.Frame;
@@ -24,7 +24,7 @@ public class GameWindow extends JFrame{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		//Set position and size of screen
-		setBounds(0, 0, screenX, screenY);
+		setBounds(0, 0, screenX, (int)(screenY * ImageScaler.sizeRatio));
 
 		//Position game in center of screen
 		setLocationRelativeTo(null);
@@ -57,6 +57,8 @@ public class GameWindow extends JFrame{
 	}
 	
 	public static void main(String[] args) {
+		Dimension screenDimensions = Toolkit.getDefaultToolkit().getScreenSize();
+		ImageScaler.setRatio(screenDimensions.getHeight());
 		GameWindow window = new GameWindow();
 		Menu menu = new Menu(window);
 		Thread menuThread = new Thread(menu);

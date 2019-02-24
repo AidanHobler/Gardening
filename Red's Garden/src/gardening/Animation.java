@@ -16,7 +16,7 @@ public class Animation {
 			String fileName = "/Images/" + name + i + ".png";
 			
 			try {
-				returnList.add(ImageIO.read(Loader.load(fileName)));
+				returnList.add(ImageScaler.scaleImage(ImageIO.read(Loader.load(fileName))));
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -33,7 +33,7 @@ public class Animation {
 			String fileName = "/Images/" + name + i + ".png";
 			
 			try {
-				returnList.add(ImageIO.read(Loader.load(fileName)));
+				returnList.add(ImageScaler.scaleImage(ImageIO.read(Loader.load(fileName))));
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
